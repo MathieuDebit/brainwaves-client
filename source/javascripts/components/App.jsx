@@ -16,7 +16,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Middleman React boilerplate</h1>
+        <h1>Brainwaves</h1>
+
+        <input type="checkbox" id="signedin" checked={this.state.user.signedIn} />
+        <label for="signedin">Signed in ?</label>
+
+        <button onClick={this.handleSignOutClick}>Sign out</button>
 
         <ul>
           <li><Link to="/">Home</Link></li>
@@ -28,5 +33,12 @@ class App extends React.Component {
         </ul>
       </div>
     );
+  }
+
+  handleSignOutClick(){
+    if(window.confirm("Log out ?")){
+      $.auth.signOut();
+      browserHistory.push('/login');
+    }
   }
 }
