@@ -7,6 +7,10 @@ html charset='utf-8' lang='en'
     meta name='viewport' content='width=device-width, initial-scale=1'
 
     = stylesheet_link_tag 'all'
+    javascript:
+      var env = {
+        apiDomain: '#{@api_domain}'
+      };
 
   body
     #app

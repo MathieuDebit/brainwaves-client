@@ -23,6 +23,8 @@ ignore 'javascripts/components/*.jsx'
 sprockets.append_path File.join root, 'node_modules'
 sprockets.append_path File.join root, 'bower_components'
 
+@api_domain = ENV['API_DOMAIN']
+
 configure :development do
   activate :livereload
 end
