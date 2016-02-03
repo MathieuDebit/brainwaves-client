@@ -1,6 +1,6 @@
-# middleman-react-boilerplate
+# brainwaves-client
 
-Basic React app built with Middleman framework
+React client app for [brainwaves-api](https://www.github.com/MathieuDebit/brainwaves-api).
 
 ## Getting started
 
@@ -10,10 +10,16 @@ Make sure to install and configure everything first.
 Clone the repo and install dependencies:
 
 ```
-git clone git@github.com:MathieuDebit/middleman-react-boilerplate.git
-cd middleman-react-boilerplate
+git clone git@github.com:MathieuDebit/brainwaves-client.git
+cd brainwaves-client
 bundle install
 npm install
+```
+
+Set up environment variables in a `.env` file
+
+```
+API_DOMAIN=
 ```
 
 That's it! Everyting you have to know about how to work with a Middleman project is in the official documentation: [https://middlemanapp.com/basics/install/](https://middlemanapp.com/basics/install/).
