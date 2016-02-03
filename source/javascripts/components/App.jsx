@@ -21,6 +21,7 @@ class App extends React.Component {
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/login">Login</Link></li>
+          <li><Link to="/signup">Sign up</Link></li>
           <li><Link to="/about">About</Link></li>
 
           {this.props.children}
