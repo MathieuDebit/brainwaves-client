@@ -5,7 +5,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      user: $.auth.user
+      user: $.auth.user || false
     };
 
     PubSub.subscribe('auth', function() {
@@ -18,19 +18,24 @@ class App extends React.Component {
       <div>
         <h1>Brainwaves</h1>
 
-        <input type="checkbox" id="signedin" checked={this.state.user.signedIn} />
-        <label for="signedin">Signed in ?</label>
+        <fieldset disabled={!this.state.user.signedIn}>
+          <legend>{this.state.user.email}</legend>
 
-        <button onClick={this.handleSignOutClick}>Sign out</button>
+          <input type="radio" name="radio" checked={this.state.user.signedIn} />
+          <label for="radio">SignedIn</label>
+          <br/>
+          <button onClick={this.handleSignOutClick}>Sign out</button>
+        </fieldset>
 
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/login">Login</Link></li>
           <li><Link to="/signup">Sign up</Link></li>
           <li><Link to="/about">About</Link></li>
-
-          {this.props.children}
         </ul>
+
+
+        {this.props.children}
       </div>
     );
   }
