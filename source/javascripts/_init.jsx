@@ -9,6 +9,7 @@ var routes = (
       <Route path="about" component={About} />
       <Route path="login" component={Login} />
       <Route path="signup" component={SignUp} />
+      <Route path="bottles" component={Bottles} />
     </Route>
   </Router>
 );

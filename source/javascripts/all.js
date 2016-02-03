@@ -11,6 +11,6 @@
 //= require _init
 
 $.auth.configure({
-  apiUrl: env.apiDomain + '/v1',
+  apiUrl: env.apiDomain,
   storage: 'localStorage'
 });

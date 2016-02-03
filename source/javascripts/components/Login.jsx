@@ -13,7 +13,7 @@ class Login extends React.Component {
           <input className='form-password' type='password' name='password'
                  placeholder='Password' />
 
-               <button onClick={this.handleLoginClick} disabled={false}>
+          <button onClick={this.handleLoginClick} disabled={false}>
             Log in
           </button>
         </form>

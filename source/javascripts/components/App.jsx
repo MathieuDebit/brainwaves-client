@@ -28,9 +28,13 @@ class App extends React.Component {
         </fieldset>
 
         <ul>
-          <li><Link to="/">Home</Link></li>
           <li><Link to="/login">Login</Link></li>
           <li><Link to="/signup">Sign up</Link></li>
+        </ul>
+
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/bottles">Bottles</Link></li>
           <li><Link to="/about">About</Link></li>
         </ul>
 
