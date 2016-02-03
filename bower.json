@@ -14,6 +14,6 @@
     "bower_components"
   ],
   "dependencies": {
-    
+    "j-toker": "~0.0.10-beta2"
   }
 }
